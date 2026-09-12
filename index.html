@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a1510" />
+  <title>Bac 2026 Algérie · Assistant IA des Lauréats</title>
+  <meta name="description" content="Assistant IA gratuit pour les lauréats du BAC 2026 en Algérie : répondre aux questions, créer des images et vidéos de célébration, analyser des documents." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu" data-i18n="skipLink">Aller au contenu</a>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ======= Header ======= -->
+  <header class="site-header" id="top" data-header>
+    <div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Bac 2026 — haut de page">
+        <span class="logo-badge" aria-hidden="true">
+          <i data-lucide="graduation-cap"></i>
+        </span>
+        <span class="logo-text">
+          <strong data-i18n="logoTitle">Bac 2026</strong>
+          <small data-i18n="logoSub">Assistant des lauréats · Algérie</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <button type="button" class="nav-link active" data-target="panelAssistant" data-i18n="tabAssistant" aria-current="true">Assistant</button>
+        <button type="button" class="nav-link" data-target="panelStudio" data-i18n="tabStudio">Studio</button>
+        <button type="button" class="nav-link" data-target="panelScanner" data-i18n="tabScanner">Scanner</button>
+      </nav>
+
+      <button id="langToggle" class="lang-btn" type="button" aria-label="Changer de langue / تغيير اللغة">
+        <span class="lang-icon" aria-hidden="true"><i data-lucide="globe"></i></span>
+        <span id="langLabel">العربية</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ======= Hero (Manifesto) ======= -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb--gold"></span>
+        <span class="orb orb--green"></span>
+        <span class="aurora aurora--a"></span>
+        <span class="aurora aurora--b"></span>
+        <span class="aurora aurora--c"></span>
+        <span class="hero-grid"></span>
+        <span class="hero-vignette"></span>
+        <span class="hero-num">2026</span>
+        <span class="confetti-dot c1"></span>
+        <span class="confetti-dot c2"></span>
+        <span class="confetti-dot c3"></span>
+        <span class="confetti-dot c4"></span>
+        <span class="confetti-dot c5"></span>
+      </div>
+      <div class="container hero-inner">
+        <span class="hero-badge" data-hero>
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+          <span data-i18n="heroBadge">Baccalauréat 2026 · Algérie</span>
+        </span>
+
+        <h1 class="hero-title" id="heroTitle" data-hero data-i18n="heroLine1">Félicitations aux lauréats !</h1>
+        <p class="hero-line2" data-hero data-i18n="heroLine2">Toutes tes réponses. Tes images. Tes vidéos.</p>
+        <p class="hero-sub" data-hero data-i18n="heroSub">
+          Ton assistant IA gratuit répond à toutes tes questions d'orientation, lit tes documents, parle avec toi,
+          et crée les images et vidéos de célébration que tu imagines.
+        </p>
+
+        <div class="hero-actions" data-hero>
+          <button type="button" class="btn btn-gold btn-lg btn-shine" data-target="panelAssistant" data-burst>
+            <span data-i18n="heroCta">Discuter maintenant</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-ghost btn-lg" data-target="panelStudio">
+            <i data-lucide="image" aria-hidden="true"></i>
+            <span data-i18n="heroCta2">Créer une image</span>
+          </button>
+        </div>
+
+        <div class="hero-stats" data-hero role="list" aria-label="Points forts">
+          <div class="stat" role="listitem">
+            <span class="stat-ico" aria-hidden="true"><i data-lucide="badge-check"></i></span>
+            <strong data-i18n="stat1Num">100%</strong><span data-i18n="stat1Label">Gratuit</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-ico" aria-hidden="true"><i data-lucide="moon-star"></i></span>
+            <strong data-i18n="stat2Num">24/7</strong><span data-i18n="stat2Label">Disponible</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-ico" aria-hidden="true"><i data-lucide="wand-sparkles"></i></span>
+            <strong data-i18n="stat3Num">4 outils</strong><span data-i18n="stat3Label">Propulsés IA</span>
+          </div>
+        </div>
+
+        <p class="scroll-hint" aria-hidden="true">
+          <span data-i18n="scrollHint">Défiler pour explorer</span>
+          <i data-lucide="chevron-down"></i>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= Tools index ======= -->
+    <section class="tools" aria-labelledby="toolsTitle">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">01</span><span data-i18n="toolsEyebrow">Les outils du lauréat</span></p>
+          <h2 class="section-title" id="toolsTitle" data-i18n="toolsTitle">Tout ce qu'il faut, au même endroit</h2>
+          <p class="section-sub" data-i18n="toolsSub">Quatre outils IA pensés pour l'après-bac : orientation, création, voix et documents.</p>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-cell tool-cell--1" data-reveal data-spotlight>
+            <span class="tool-glow" aria-hidden="true"></span>
+            <div class="tool-top">
+              <span class="tool-index">01</span>
+              <span class="tool-ico"><i data-lucide="message-circle" aria-hidden="true"></i></span>
+            </div>
+            <h3 data-i18n="featAssistantTitle">Assistant intelligent</h3>
+            <p data-i18n="featAssistantDesc">Orientation, filières, inscriptions, bourses… réponse à toutes tes questions en français ou en arabe.</p>
+            <button type="button" class="tool-link" data-target="panelAssistant">
+              <span data-i18n="tabAssistant">Assistant</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="tool-cell tool-cell--2" data-reveal data-spotlight>
+            <span class="tool-glow" aria-hidden="true"></span>
+            <div class="tool-top">
+              <span class="tool-index">02</span>
+              <span class="tool-ico"><i data-lucide="frame" aria-hidden="true"></i></span>
+            </div>
+            <h3 data-i18n="featStudioTitle">Studio créatif</h3>
+            <p data-i18n="featStudioDesc">Images et vidéos de célébration générées par IA, avec les modèles de ton choix.</p>
+            <button type="button" class="tool-link" data-target="panelStudio">
+              <span data-i18n="tabStudio">Studio</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="tool-cell tool-cell--3" data-reveal data-spotlight>
+            <span class="tool-glow" aria-hidden="true"></span>
+            <div class="tool-top">
+              <span class="tool-index">03</span>
+              <span class="tool-ico"><i data-lucide="mic" aria-hidden="true"></i></span>
+            </div>
+            <h3 data-i18n="featVoiceTitle">Parle & écoute</h3>
+            <p data-i18n="featVoiceDesc">Dictée vocale de tes questions et réponses lues à voix haute par l'IA.</p>
+            <button type="button" class="tool-link" data-target="panelAssistant">
+              <span data-i18n="tabAssistant">Assistant</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="tool-cell tool-cell--4" data-reveal data-spotlight>
+            <span class="tool-glow" aria-hidden="true"></span>
+            <div class="tool-top">
+              <span class="tool-index">04</span>
+              <span class="tool-ico"><i data-lucide="scan-line" aria-hidden="true"></i></span>
+            </div>
+            <h3 data-i18n="featScannerTitle">Scanner de documents</h3>
+            <p data-i18n="featScannerDesc">Photo d'un document, relevé ou attestation : extraction du texte et explication par l'IA.</p>
+            <button type="button" class="tool-link" data-target="panelScanner">
+              <span data-i18n="tabScanner">Scanner</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Gallery strip ======= -->
+    <section class="gallery" aria-labelledby="galleryTitle">
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow-num">02</span><span data-i18n="galleryEyebrow">La promo en images</span></p>
+            <h2 class="section-title" id="galleryTitle" data-i18n="galleryTitle">Une nuit à célébrer</h2>
+          </div>
+          <p class="section-sub" data-i18n="gallerySub">De la proclamation des résultats aux photos de famille — génère tes propres souvenirs dans le Studio.</p>
+        </div>
+        <div class="gallery-row">
+          <figure class="polaroid polaroid--sm polaroid--sm1" data-reveal>
+            <span class="tape" aria-hidden="true"></span>
+            <!-- TODO: Replace with real celebration photo, target size: 420×520 -->
+            <div class="polaroid-inner" style="background-image: var(--img-g1)" role="img" aria-label="Photo de célébration du BAC 2026"></div>
+            <figcaption><span class="photo-num">01</span> Alger · BAC 2026</figcaption>
+          </figure>
+          <figure class="polaroid polaroid--sm polaroid--sm2" data-reveal>
+            <span class="tape" aria-hidden="true"></span>
+            <!-- TODO: Replace with real celebration photo, target size: 420×520 -->
+            <div class="polaroid-inner" style="background-image: var(--img-g2)" role="img" aria-label="Photo de célébration du BAC 2026"></div>
+            <figcaption><span class="photo-num">02</span> Oran · BAC 2026</figcaption>
+          </figure>
+          <figure class="polaroid polaroid--sm polaroid--sm3" data-reveal>
+            <span class="tape" aria-hidden="true"></span>
+            <!-- TODO: Replace with real celebration photo, target size: 420×520 -->
+            <div class="polaroid-inner" style="background-image: var(--img-g3)" role="img" aria-label="Photo de célébration du BAC 2026"></div>
+            <figcaption><span class="photo-num">03</span> Constantine · BAC 2026</figcaption>
+          </figure>
+          <figure class="polaroid polaroid--sm polaroid--sm4" data-reveal>
+            <span class="tape" aria-hidden="true"></span>
+            <!-- TODO: Replace with real celebration photo, target size: 420×520 -->
+            <div class="polaroid-inner" style="background-image: var(--img-g4)" role="img" aria-label="Photo de célébration du BAC 2026"></div>
+            <figcaption><span class="photo-num">04</span> Annaba · BAC 2026</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Workspace ======= -->
+    <section class="app" id="app" aria-labelledby="workspaceTitle">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">03</span><span data-i18n="workspaceEyebrow">Espace lauréat</span></p>
+          <h2 class="section-title" id="workspaceTitle" data-i18n="workspaceTitle">Ton atelier, prêt à l'emploi</h2>
+          <p class="section-sub" data-i18n="workspaceSub">Discute, crée, scanne — sans inscription, sans clé API, directement dans le navigateur.</p>
+        </div>
+
+        <div class="window" data-reveal>
+          <div class="window-bar" aria-hidden="true">
+            <span class="traffic"><i></i><i></i><i></i></span>
+            <span class="window-addr"><i data-lucide="lock"></i> bac2026.dz — espace lauréat</span>
+            <span class="window-live"><span class="pulse-dot pulse-dot--sm"></span> IA en ligne</span>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Outils IA" data-reveal>
+            <button type="button" class="tab active" id="tabAssistant" data-target="panelAssistant" role="tab" aria-selected="true" aria-controls="panelAssistant">
+              <span class="tab-num">01</span><span data-i18n="tabAssistant">Assistant</span>
+            </button>
+            <button type="button" class="tab" id="tabStudio" data-target="panelStudio" role="tab" aria-selected="false" aria-controls="panelStudio" tabindex="-1">
+              <span class="tab-num">02</span><span data-i18n="tabStudio">Studio</span>
+            </button>
+            <button type="button" class="tab" id="tabScanner" data-target="panelScanner" role="tab" aria-selected="false" aria-controls="panelScanner" tabindex="-1">
+              <span class="tab-num">03</span><span data-i18n="tabScanner">Scanner</span>
+            </button>
+          </div>
+
+          <!-- ===== Panel: Assistant ===== -->
+          <div class="panel active" id="panelAssistant" role="tabpanel" aria-labelledby="tabAssistant" tabindex="0">
+            <div class="card chat-card">
+              <div class="card-head">
+                <div>
+                  <h2 data-i18n="chatTitle">Ton assistant personnel</h2>
+                  <p data-i18n="chatSub">Pose ta question par écrit ou par la voix. Choisis le modèle IA que tu préfères.</p>
+                </div>
+                <div class="head-actions">
+                  <button id="clearChat" class="btn btn-mini btn-ghost" type="button" title="Effacer">
+                    <i data-lucide="eraser" aria-hidden="true"></i>
+                    <span data-i18n="clearChat">Effacer</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="model-row">
+                <label for="chatModel" data-i18n="modelLabel">Modèle IA</label>
+                <select id="chatModel"></select>
+              </div>
+
+              <div id="quickChips" class="chips" aria-label="Questions rapides"></div>
+
+              <div id="chatBox" class="chat-box" aria-live="polite" aria-label="Conversation avec l'assistant"></div>
+
+              <div class="chat-form">
+                <button id="micBtn" class="btn btn-round btn-ghost" type="button" title="Dictée vocale" aria-label="Dictée vocale" aria-pressed="false">
+                  <i class="mic-icon" data-lucide="mic" aria-hidden="true"></i>
+                </button>
+                <textarea id="chatInput" rows="1" aria-label="Écris ta question" data-i18n-placeholder="chatPlaceholder"
+                  placeholder="Ex : Quelle filière choisir avec une moyenne de 14 ?"></textarea>
+                <button id="sendBtn" class="btn btn-gold" type="button">
+                  <span data-i18n="send">Envoyer</span>
+                  <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="hint" data-i18n="chatHint">
+                L'assistant peut se tromper. Vérifie toujours les informations auprès des sources officielles (Ministère, ONEC, orientation.dz).
+              </p>
+            </div>
+          </div>
+
+          <!-- ===== Panel: Studio ===== -->
+          <div class="panel" id="panelStudio" role="tabpanel" aria-labelledby="tabStudio" tabindex="0" hidden>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h2 data-i18n="studioTitle">Studio créatif</h2>
+                  <p data-i18n="studioSub">Génère des images et des vidéos de célébration personnalisées.</p>
+                </div>
+              </div>
+
+              <div class="subtabs" role="tablist" aria-label="Type de création">
+                <button type="button" class="subtab active" data-sub="subImg" role="tab" aria-selected="true">
+                  <i class="subtab-glyph" data-lucide="image" aria-hidden="true"></i>
+                  <span data-i18n="subImg">Image</span>
+                </button>
+                <button type="button" class="subtab" data-sub="subVideo" role="tab" aria-selected="false">
+                  <i class="subtab-glyph" data-lucide="video" aria-hidden="true"></i>
+                  <span data-i18n="subVideo">Vidéo</span>
+                </button>
+              </div>
+
+              <!-- Image generator -->
+              <div class="subpanel active" id="subImg" role="tabpanel">
+                <div class="controls-grid">
+                  <div class="model-row">
+                    <label for="imgModel" data-i18n="modelLabel">Modèle IA</label>
+                    <select id="imgModel"></select>
+                  </div>
+                  <div class="model-row">
+                    <label for="imgQuality" data-i18n="qualityLabel">Qualité</label>
+                    <select id="imgQuality">
+                      <option value="low" data-i18n="qLow">Basse</option>
+                      <option value="medium" data-i18n="qMedium" selected>Moyenne</option>
+                      <option value="high" data-i18n="qHigh">Haute</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="imgTemplates" class="chips" aria-label="Modèles d'images"></div>
+
+                <div class="img-form">
+                  <input id="imgPrompt" type="text" aria-label="Description de l'image" data-i18n-placeholder="imgPlaceholder"
+                    placeholder="Décris l'image que tu veux générer…" />
+                  <button id="generateBtn" class="btn btn-gold btn-shine" type="button">
+                    <i data-lucide="wand-sparkles" aria-hidden="true"></i>
+                    <span data-i18n="generate">Générer</span>
+                  </button>
+                </div>
+
+                <div id="imgResult" class="result-box">
+                  <div class="result-empty" id="imgEmpty">
+                    <i class="result-glyph" data-lucide="image" aria-hidden="true"></i>
+                    <p data-i18n="imgEmpty">Ton image apparaîtra ici…</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Video generator -->
+              <div class="subpanel" id="subVideo" role="tabpanel" hidden>
+                <div class="controls-grid">
+                  <div class="model-row">
+                    <label for="vidModel" data-i18n="modelLabel">Modèle IA</label>
+                    <select id="vidModel"></select>
+                  </div>
+                  <div class="model-row">
+                    <label for="vidSeconds" data-i18n="vidSecondsLabel">Durée</label>
+                    <select id="vidSeconds">
+                      <option value="4">4 s</option>
+                      <option value="8" selected>8 s</option>
+                      <option value="12">12 s</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="vidTemplates" class="chips" aria-label="Modèles de vidéos"></div>
+
+                <div class="img-form">
+                  <input id="vidPrompt" type="text" aria-label="Description de la vidéo" data-i18n-placeholder="vidPlaceholder"
+                    placeholder="Décris la vidéo que tu veux créer…" />
+                  <button id="vidGenerateBtn" class="btn btn-gold btn-shine" type="button">
+                    <i data-lucide="clapperboard" aria-hidden="true"></i>
+                    <span data-i18n="vidGenerate">Créer la vidéo</span>
+                  </button>
+                </div>
+
+                <div id="vidResult" class="result-box">
+                  <div class="result-empty" id="vidEmpty">
+                    <i class="result-glyph" data-lucide="video" aria-hidden="true"></i>
+                    <p data-i18n="vidEmpty">Ta vidéo apparaîtra ici…</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Panel: Scanner ===== -->
+          <div class="panel" id="panelScanner" role="tabpanel" aria-labelledby="tabScanner" tabindex="0" hidden>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h2 data-i18n="scannerTitle">Scanner & analyse</h2>
+                  <p data-i18n="scannerSub">Photographie un document (relevé, attestation, notification…), l'IA lit et explique.</p>
+                </div>
+                <div class="head-actions">
+                  <span class="step-badge" aria-hidden="true"><i data-lucide="scan-line"></i> OCR + IA</span>
+                </div>
+              </div>
+
+              <input type="file" id="fileInput" accept="image/*" hidden />
+              <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Choisir une image" aria-describedby="dropHintText">
+                <span class="drop-ring" aria-hidden="true"><i class="drop-glyph" data-lucide="file-up" aria-hidden="true"></i></span>
+                <p data-i18n="dropText">Clique ou dépose une image ici</p>
+                <small id="dropHintText" data-i18n="dropHint">JPG, PNG… (max 10 Mo)</small>
+              </div>
+
+              <div id="scanPreviewWrap" class="scan-preview hidden">
+                <img id="scanPreview" alt="Aperçu du document" />
+                <button id="changeImg" class="btn btn-mini btn-ghost" type="button"><span aria-hidden="true">↻</span> <span data-i18n="changeImage">Changer d'image</span></button>
+              </div>
+
+              <div class="scan-actions">
+                <button id="ocrBtn" class="btn btn-ghost" type="button" disabled>
+                  <i data-lucide="text-select" aria-hidden="true"></i>
+                  <span data-i18n="btnOcr">Extraire le texte (OCR)</span>
+                </button>
+                <button id="analyzeBtn" class="btn btn-gold btn-shine" type="button" disabled>
+                  <i data-lucide="brain" aria-hidden="true"></i>
+                  <span data-i18n="btnAnalyze">Analyser avec l'IA</span>
+                </button>
+              </div>
+
+              <div class="scan-output">
+                <div id="ocrBlock" class="scan-block hidden">
+                  <h4 data-i18n="ocrTitle">Texte extrait</h4>
+                  <pre id="ocrText"></pre>
+                </div>
+                <div id="analysisBlock" class="scan-block hidden">
+                  <h4 data-i18n="analysisTitle">Analyse IA</h4>
+                  <div id="analysisText" class="analysis-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /window -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-eyebrow" data-i18n="footerEyebrow">Génération 2026 — Algérie</p>
+      <p class="footer-mark" data-i18n="logoTitle">Bac 2026</p>
+      <div class="footer-rule" aria-hidden="true"><span></span></div>
+      <p class="footer-main" data-i18n="footerText">Fait avec ❤️ pour la génération BAC 2026 en Algérie 🇩🇿</p>
+      <p class="footer-note" data-i18n="footerNote">Propulsé par puter.js — IA gratuite, sans clé API, 400+ modèles</p>
+      <a class="to-top" href="#top" aria-label="Retour en haut de page">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Advanced libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.441.0/dist/umd/lucide.min.js"></script>
+  <script src="https://js.puter.com/v2/"></script>
+  <script src="js/app.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>

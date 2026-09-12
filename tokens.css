@@ -1,0 +1,124 @@
+/* ============================================================
+   Bac 2026 Algérie — design tokens
+   Hallmark · custom premium theme · dark emerald + champagne gold
+   Festive-premium-dark v4 — single source of truth.
+   ============================================================ */
+
+:root {
+  /* ---- Colour (premium dark-gold) ---- */
+  --color-paper:      oklch(15%   0.018 160);  /* deep emerald-black canvas */
+  --color-paper-2:    oklch(19%   0.020 160);  /* one elevation step */
+  --color-paper-3:    oklch(24%   0.022 160);  /* sunk / hover surface */
+  --color-ink:        oklch(94%   0.010 100);  /* warm light text */
+  --color-ink-2:      oklch(72%   0.014 100);  /* secondary text */
+  --color-rule:       oklch(32%   0.020 160);  /* hairline */
+  --color-rule-2:     oklch(45%   0.024 160);  /* visible border */
+  --color-muted:      oklch(62%   0.020 120);  /* de-emphasised text */
+
+  --color-gold:       oklch(80%   0.13  90);   /* champagne gold accent */
+  --color-gold-hi:    oklch(86%   0.12  90);   /* hover-gold */
+  --color-gold-soft:  oklch(26%   0.05  90);   /* gold-tinted dark fill */
+  --color-gold-deep:  oklch(62%   0.14  85);   /* deep gold for gradients / text shade */
+  --color-gold-glass: oklch(80%   0.13  90 / 12%); /* gold wash for hovers */
+  --color-accent-ink: oklch(20%   0.025 160);  /* deep green-black on gold */
+
+  --color-green:      oklch(56%   0.12  155);  /* Algerian green (secondary) */
+  --color-green-soft: oklch(22%   0.04  155);  /* green-tinted dark fill */
+  --color-coral:      oklch(64%   0.17  25);   /* errors */
+  --color-coral-soft: oklch(22%   0.04  25);
+
+  --color-focus:      oklch(80%   0.15  90);   /* gold focus ring */
+
+  /* ---- Gradients & glows (festive-premium, restrained) ---- */
+  --gradient-gold: linear-gradient(135deg, oklch(88% 0.12 92), oklch(76% 0.14 88) 55%, oklch(64% 0.14 84));
+  --gradient-gold-text: linear-gradient(100deg, oklch(90% 0.11 95), oklch(79% 0.14 89) 55%, oklch(70% 0.13 85));
+  --gradient-card-top: linear-gradient(90deg, transparent, oklch(80% 0.13 90 / 55%), transparent);
+  --glow-gold: 0 10px 32px -12px oklch(80% 0.13 90 / 55%);
+  --glow-green: 0 0 0 1px oklch(56% 0.12 155 / 18%), 0 18px 60px -24px oklch(56% 0.12 155 / 35%);
+  --shadow-lift: 0 24px 60px -28px oklch(0% 0 0 / 80%);
+  --shadow-soft: 0 14px 36px -20px oklch(0% 0 0 / 70%);
+
+  /* ---- 21st.dev ports (vanilla, zero-dep) ---- */
+  --gradient-gold-animated: linear-gradient(110deg, oklch(88% 0.12 92), oklch(76% 0.14 88) 30%, oklch(90% 0.11 95) 50%, oklch(64% 0.14 84) 70%, oklch(88% 0.12 92));
+  --wash-bento: radial-gradient(ellipse 60% 80% at 70% 50%, oklch(80% 0.13 90 / 14%), transparent 70%);
+  --wash-aurora-gold: radial-gradient(closest-side, oklch(80% 0.13 90 / 20%), transparent 72%);
+  --wash-aurora-green: radial-gradient(closest-side, oklch(56% 0.12 155 / 18%), transparent 70%);
+  --wash-aurora-ink: radial-gradient(closest-side, oklch(42% 0.08 160 / 22%), transparent 70%);
+  --glow-gold-strong: 0 0 0 1px oklch(80% 0.13 90 / 35%), 0 12px 40px -12px oklch(80% 0.13 90 / 60%), 0 0 24px -6px oklch(80% 0.13 90 / 40%);
+  --glass-21st: color-mix(in oklch, var(--color-paper-2) 72%, transparent);
+
+  /* ---- Fonts ---- */
+  --font-display: 'Fraunces', 'Tajawal', ui-serif, Georgia, serif;
+  --font-body:    'Geist', 'Tajawal', system-ui, sans-serif;
+  --font-outlier: 'JetBrains Mono', ui-monospace, monospace;
+  --font-arabic:  'Tajawal', var(--font-body);
+  --font-emoji:   'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+
+  /* ---- Placeholder photos (single swap point) ----
+     TODO: Replace with real celebration photos.
+     Target sizes: polaroids 520×640, gallery 420×520. */
+  --img-p1: url("https://picsum.photos/seed/bac2026-confetti-a/520/640");
+  --img-p2: url("https://picsum.photos/seed/bac2026-confetti-b/520/640");
+  --img-p3: url("https://picsum.photos/seed/bac2026-confetti-c/520/640");
+  --img-g1: url("https://picsum.photos/seed/bac2026-day-a/420/520");
+  --img-g2: url("https://picsum.photos/seed/bac2026-day-b/420/520");
+  --img-g3: url("https://picsum.photos/seed/bac2026-day-c/420/520");
+  --img-g4: url("https://picsum.photos/seed/bac2026-day-d/420/520");
+
+  /* ---- Layout ---- */
+  --container: 76rem; /* 1216px — a touch wider for the gallery + workspace */
+  --container-narrow: 68rem; /* 1088px — hero + tools measure */
+  --header-h: 4.25rem; /* 68px */
+
+  /* ---- Spacing (4pt scale) ---- */
+  --space-3xs: 0.125rem;  /*  2px */
+  --space-2xs: 0.25rem;   /*  4px */
+  --space-xs:  0.5rem;    /*  8px */
+  --space-sm:  0.75rem;   /* 12px */
+  --space-md:  1rem;      /* 16px */
+  --space-lg:  1.5rem;    /* 24px */
+  --space-xl:  2.5rem;    /* 40px */
+  --space-2xl: 4rem;      /* 64px */
+  --space-3xl: 6rem;      /* 96px */
+  --space-4xl: 9rem;      /* 144px */
+
+  /* ---- Type scale (1.25 ratio) ---- */
+  --text-xs:   0.64rem;   /* 10.24px */
+  --text-sm:   0.8rem;    /* 12.8px  */
+  --text-base: 1rem;      /* 16px    */
+  --text-md:   1.25rem;   /* 20px    */
+  --text-lg:   1.4375rem; /* 23px    */
+  --text-xl:   1.7969rem; /* 28.75px */
+  --text-2xl:  2.2461rem; /* 35.94px */
+  --text-display: clamp(2.9rem, 4vw + 2rem, 6.25rem);
+  --text-hero-accent: 1.04em; /* italic gold word scales with display */
+  --eyebrow-size: 0.72rem;
+  --eyebrow-tracking: 0.22em;
+
+  /* ---- Motion ---- */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:      cubic-bezier(0.7,  0, 0.84, 0);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:  cubic-bezier(0.22, 1.2, 0.36, 1);
+  --dur-micro:    120ms;
+  --dur-short:    220ms;
+  --dur-long:     420ms;
+  --dur-slow:     700ms;
+
+  /* ---- Radius ---- */
+  --radius-xs:   4px;
+  --radius-sm:   10px;
+  --radius:      14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 999px;
+
+  /* ---- Z scale ---- */
+  --z-base:     1;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+}
